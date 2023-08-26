@@ -10,3 +10,14 @@ export const getProducts = async (callback) => {
       console.log(err);
     });
 };
+
+export const getProductsCategory = async (callback) => {
+  axios
+    .get("https://fakestoreapi.com/products/categories")
+    .then((res) => {
+      callback(res.data);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+};
