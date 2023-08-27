@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="flex flex-wrap lg:flex-nowrap mx-32">
           <div className="w-full px-4 mb-12 font-medium">
-            <h2 className="font-semibold text-2xl tracking-widest uppercase">
+            <h2 className="font-semibold text-2xl tracking-widest uppercase text-[#566ffe]">
               Hilalstore
             </h2>
             <h3 className="font-normal text-sm">Copyright © 2023. Lol Team</h3>

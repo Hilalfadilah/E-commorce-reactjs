@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -20,12 +21,12 @@ const Hero = () => {
             untuk jual beli bagi pengguna
           </p>
           <div className="flex flex-col space-y-4 sm:items-center sm:justify-center sm:flex-row sm:space-y-0 sm:space-x-4 lg:justify-start">
-            <a
-              href="#"
+            <Link
+              to={"/produk"}
               className="text-white text-base bg-[#566ffe] hover:bg-[#566ffe]/90 shadow-xl shadow-black/20 focus:ring-4 focus:ring-blue-300 font-medium rounded-xl px-[24px] py-2.5 mr-2 mb-2 focus:outline-none transition"
             >
               Explore produk
-            </a>
+            </Link>
           </div>
         </div>
       </div>
