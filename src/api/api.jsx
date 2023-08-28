@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const getProducts = async (callback) => {
+export const getProducts = (callback) => {
   axios
     .get("https://fakestoreapi.com/products")
     .then((res) => {
@@ -10,10 +10,9 @@ export const getProducts = async (callback) => {
       console.log(err);
     });
 };
-
-export const getProductsCategory = async (callback) => {
+export const getDetailProducts = (id, callback) => {
   axios
-    .get("https://fakestoreapi.com/products/categories")
+    .get(`https://fakestoreapi.com/products/${id}`)
     .then((res) => {
       callback(res.data);
     })

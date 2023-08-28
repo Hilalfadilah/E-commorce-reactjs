@@ -6,9 +6,12 @@ const Navbar = () => {
     <React.Fragment>
       <nav className="w-full flex items-center justify-between fixed top-0 z-10 bg-white p-4 border-b border-solid border-cyan-200">
         <div className="flex items-center flex-shrink-0 lg:ml-20">
-          <span className="font-semibold text-[32px] -tracking-tighter text-[#566ffe]">
+          <Link
+            to={"/"}
+            className="font-semibold text-[32px] -tracking-tighter text-[#566ffe]"
+          >
             HilalStore
-          </span>
+          </Link>
         </div>
         <div className="block lg:hidden">
           <button className="flex items-center px-3 py-2 border rounded text-teal-200 border-teal-400 hover:text-white hover:border-white">

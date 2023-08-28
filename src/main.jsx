@@ -5,6 +5,7 @@ import Home from "./pages/Home";
 import Produk from "./pages/Produk";
 import "./index.css";
 import { ThemeProvider } from "@material-tailwind/react";
+import Detail from "./pages/Detail";
 
 const router = createBrowserRouter([
   {
@@ -14,6 +15,10 @@ const router = createBrowserRouter([
   {
     path: "/produk",
     element: <Produk />,
+  },
+  {
+    path: "/detail/:id",
+    element: <Detail />,
   },
 ]);
 

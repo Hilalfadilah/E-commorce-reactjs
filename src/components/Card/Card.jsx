@@ -2,13 +2,20 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 const Card = (props) => {
-  const { image, title, price, category, description } = props;
+  const { image, title, price, category, description, id } = props;
   return (
     <>
-      <Link className="transition-transform duration-300 hover:scale-105">
-        <div className="card w-72 bg-base-100">
-          <figure className="w-[220px] h-[250px] mx-auto">
-            <img src={image} alt="Shoes" className="h-[170px] object-fill" />
+      <Link
+        to={`/detail/${id}`}
+        className="transition-transform duration-300 hover:scale-105"
+      >
+        <div className="card w-[350px] md:w-72 bg-base-100">
+          <figure className="w-[220px] h-[250px] mt-10 mx-auto md:mt-0">
+            <img
+              src={image}
+              alt={title}
+              className="h-[240px] md:h-[170px] object-fill"
+            />
           </figure>
           <div className="card-body">
             <h1 className="card-title justify-end font-normal text-sm tracking-wider">

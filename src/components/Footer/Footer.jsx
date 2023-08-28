@@ -4,8 +4,8 @@ const Footer = () => {
   return (
     <footer className="bg-white p-10 pt-20">
       <div className="container">
-        <div className="flex flex-wrap lg:flex-nowrap mx-32">
-          <div className="w-full px-4 mb-12 font-medium">
+        <div className="flex flex-wrap lg:flex-nowrap lg:mx-32">
+          <div className="w-full text-center font-medium mb-10 lg:text-start lg:mb-12 lg:px-4">
             <h2 className="font-semibold text-2xl tracking-widest uppercase text-[#566ffe]">
               Hilalstore
             </h2>
