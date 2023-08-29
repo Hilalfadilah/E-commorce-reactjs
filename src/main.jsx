@@ -1,11 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { ThemeProvider } from "@material-tailwind/react";
+import "./index.css";
 import Home from "./pages/Home";
 import Produk from "./pages/Produk";
-import "./index.css";
-import { ThemeProvider } from "@material-tailwind/react";
 import Detail from "./pages/Detail";
+import About from "./pages/About";
 
 const router = createBrowserRouter([
   {
@@ -19,6 +20,10 @@ const router = createBrowserRouter([
   {
     path: "/detail/:id",
     element: <Detail />,
+  },
+  {
+    path: "/about",
+    element: <About />,
   },
 ]);
 

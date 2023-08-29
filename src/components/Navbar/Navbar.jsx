@@ -34,7 +34,7 @@ const Navbar = () => {
               Produk
             </Link>
             <Link
-              to={"/"}
+              to={"/about"}
               className="block mt-4 lg:inline-flex lg:mt-0 hover:text-[#566ffe] mr-10"
             >
               Tentang Kami
