@@ -3,12 +3,31 @@ import Layout from "../components/Layout/Layout";
 import Card from "../components/Card/Card";
 import Hero from "../components/Hero/Hero";
 import { getProducts } from "../api/api";
+import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+  function getCookie(name) {
+    const cookieString = document.cookie;
+    const cookies = cookieString.split("; ");
+
+    for (const cookie of cookies) {
+      const [cookieName, cookieValue] = cookie.split("=");
+      if (cookieName === name) {
+        return decodeURIComponent(cookieValue);
+      }
+    }
+
+    return null; // Return null if the cookie is not found
+  }
   const [products, setProducts] = useState([]);
   const [isLoading, setLoading] = useState(false);
+  const token = getCookie("user_token");
+  const navigate = useNavigate();
 
   useEffect(() => {
+    if (!token) {
+      navigate("/login");
+    }
     setLoading(true);
     getProducts((data) => {
       setProducts(data);
