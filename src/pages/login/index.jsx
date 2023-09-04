@@ -1,19 +1,28 @@
 import { React, useState } from "react";
 import Button from "../../components/Button/Button";
+import { useNavigate } from "react-router-dom";
 
 const Login = () => {
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    fetch("/api/postLogin", {
-      headers: {
-        "content-type": "application/json",
-      },
-      method: "POST",
-      body: JSON.stringify({
-        username: e.target[0].value,
-        password: e.target[1].value,
-      }),
-    }).then((res) => console.log(res));
+    try {
+      const response = await fetch('https://fakestoreapi.com/auth/login', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          username: e.target[0].value,
+          password: e.target[1].value,
+        }),
+      });
+      const data = await response.json();
+      document.cookie = "user_token=" + data.token;
+      navigate("/");
+    } catch (error) {
+      console.error('Error:', error);
+    }
   };
   return (
     <section className="bg-gray-50 dark:bg-gray-900">
@@ -80,7 +89,7 @@ const Login = () => {
                   </div>
                   <div className="ml-3 text-sm">
                     <label
-                      for="remember"
+                      htmlFor="remember"
                       className="text-gray-500 dark:text-gray-300"
                     >
                       Remember me
