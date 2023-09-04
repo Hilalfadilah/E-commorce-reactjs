@@ -1,5 +1,4 @@
 import React from "react";
-import image1 from "../../public/hilal-removebg.png";
 import Layout from "../components/Layout/Layout";
 
 const About = () => {
@@ -14,7 +13,7 @@ const About = () => {
           </div>
           <div className="m-auto">
             <img
-              src={image1}
+              src="/hilal-remove.png"
               alt=""
               className="w-[400px] rounded-[100px] hover:scale-105 transition-all duration-100 ease-linear"
             />
