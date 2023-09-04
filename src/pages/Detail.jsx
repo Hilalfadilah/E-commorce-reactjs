@@ -58,7 +58,7 @@ const Detail = () => {
                 </p>
                 <Link
                   to={"/produk"}
-                  className="text-sm text-blue-300 ring-1 ring-blue-300 shadow-[2px_5px_8px_1px_rgba(0,0,0,0.2)] focus:ring-4 focus:ring-blue-300 font-medium rounded-xl px-[15px] py-2 mb-2 focus:outline-none transition"
+                  className="text-sm text-blue-300 ring-1 ring-blue-300 shadow-[2px_5px_8px_1px_rgba(0,0,0,0.2)] focus:ring-4 focus:ring-blue-300 font-medium rounded-xl px-[15px] py-2 mb-2 focus:outline-none transition-all duration-150 ease-in-out hover:bg-[#566ffe] hover:text-white"
                 >
                   Kembali
                 </Link>
@@ -90,7 +90,7 @@ const Detail = () => {
                 </div>
                 <Button
                   text="Tambah ke keranjang"
-                  className="px-5 py-2 mt-5 md:py-0 md:mt-0 text-base text-white bg-[#566ffe] font-semibold rounded-lg shadow-[2px_5px_8px_1px_rgba(0,0,0,0.2)]"
+                  className="px-5 py-2 mt-5 md:py-0 md:mt-0 text-base text-white bg-[#566ffe] font-semibold rounded-lg shadow-[2px_5px_8px_1px_rgba(0,0,0,0.2)] transition-all duration-150 ease-in-out hover:bg-opacity-80"
                 ></Button>
               </div>
             </div>

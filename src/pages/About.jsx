@@ -13,7 +13,7 @@ const About = () => {
           </div>
           <div className="m-auto">
             <img
-              src="/hilal-remove.png"
+              src="../../public/hilal-removebg.png"
               alt=""
               className="w-[400px] rounded-[100px] hover:scale-105 transition-all duration-100 ease-linear"
             />

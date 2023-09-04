@@ -2,12 +2,28 @@
 const withMT = require("@material-tailwind/react/utils/withMT");
 
 module.exports = withMT({
-  content: [ "./index.html",
-  "./src/**/*.{js,ts,jsx,tsx}","./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
-  "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@material-tailwind/react/components/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/@material-tailwind/react/theme/components/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {},
+    extend: {
+      keyFrames: {
+        animatedgradient: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+      },
+      backgroundSize: {
+        "30%": "30%",
+      },
+      animation: {
+        animatedgradient: "animatedgradient 6s ease infinite alternate",
+      },
+    },
   },
   plugins: [require("daisyui")],
-})
-
+});
