@@ -51,6 +51,7 @@ const Login = () => {
                   name="email"
                   id="email"
                   required=""
+                  value="johnd"
                 />
               </div>
               <div>
@@ -67,6 +68,7 @@ const Login = () => {
                   color="blue"
                   label="Password"
                   required=""
+                  value="m38rmF$"
                 />
               </div>
               <div className="flex items-center justify-between">
